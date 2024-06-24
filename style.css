@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.clear-fix {
+  clear: both;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* home section style */
+
+.home {
+  background: #0004 url(images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+nav .container,
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  margin: 1.3rem 0.4rem;
+}
+nav a {
+  padding: 0.5rem;
+  color: #fff;
+}
+
+nav a:visited {
+  color: #b12442;
+}
+
+main {
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main p:nth-child(1) {
+  font-size: 24px;
+  font-weight: bold;
+}
+main p:nth-child(2) {
+  font-size: 70px;
+  font-weight: bolder;
+  color: #b12442;
+  margin: 1rem 0;
+}
+main p:nth-child(3) {
+  font-size: 18px;
+  position: relative;
+}
+main p:nth-child(3)::after {
+  content: "";
+  border-right: 3px solid white;
+  position: relative;
+  padding: 2px;
+  animation: hero 5s infinite  linear;
+}
+
+@keyframes hero {
+  0% {
+    content: "d";
+  }
+  3% {
+    content: "de";
+  }
+  6% {
+    content: "dev";
+  }
+  9% {
+    content: "deve";
+  }
+
+  12% {
+    content: "devel";
+  }
+
+  15% {
+    content: "develo";
+  }
+
+  18% {
+    content: "develop";
+  }
+
+  21% {
+    content: "develope";
+  }
+
+  24% {
+    content: "developer  ";
+  }
+  27% {
+    content: "develope";
+  }
+
+  30% {
+    content: "develop";
+  }
+
+  33% {
+    content: "develo";
+  }
+
+  36% {
+    content: "devel";
+  }
+
+  39% {
+    content: "deve";
+  }
+
+  42% {
+    content: "dev";
+  }
+
+  45% {
+    content: "de";
+  }
+
+  48% {
+    content: "d";
+  }
+
+  51% {
+    content: "";
+  }
+
+  54% {
+    content: "d";
+  }
+
+  57% {
+    content: "de";
+  }
+
+  60% {
+    content: "des";
+  }
+
+  63% {
+    content: "desi";
+  }
+
+  66% {
+    content: "desig";
+  }
+
+  69% {
+    content: "design";
+  }
+
+  72% {
+    content: "designe";
+  }
+
+  75% {
+    content: "designer";
+  }
+
+  78% {
+    content: "designe";
+  }
+
+  81% {
+    content: "design";
+  }
+
+  84% {
+    content: "desig";
+  }
+
+  87% {
+    content: "desi";
+  }
+
+  90% {
+    content: "des";
+  }
+
+  93% {
+    content: "de";
+  }
+
+  96% {
+    content: "d";
+  }
+
+  100% {
+    content: "";
+  }
+}
+
+
+/* about section style */
+
+.about {
+  min-height: 100vh;
+  padding: 4rem 0;
+}
+
+.about .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img, .about-content {
+  width: 50%;
+  padding: 1rem;
+}
+
+.about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.about-img .img{
+  width: 80%;
+  height: 100%;
+  border-radius: 0.9rem;
+  position: relative;
+  border: 0.5rem solid #555;
+}
+.about-img img{
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 1rem;
+  left: 1rem;
+}
+
+.img-layer{
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 0%;
+  padding-inline: 50px;
+  background-color: #0006;
+  position: absolute;
+  opacity: 0;
+  left: 1rem;
+  top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  transition: 0.3s all ;
+}
+.img:hover .img-layer{
+  opacity: 1;
+height: 100%;
+z-index: 2;
+}
+
+.about-content h2 {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.about-content h2::before {
+  content: "";
+  position: relative;
+  border: 2px solid #b12442;
+  margin-right: 5px;
+  
+}
+
+.about-content .summary {
+  border-bottom: 1px dashed #999999;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+margin: 0 0 20px ;
+}
+
+.details p {
+  width: 50%;
+  font-size: 18px;
+  margin-block: 10px;
+}
+
+.details p span {
+  font-weight: bold;
+  margin-right: 3px;
+}
+
+.download-btn , .hire-btn {
+  font-size: 18px;
+  background: #ff305b none repeat scroll 0 0;
+  border-radius: 4px;
+  color: #ffffff;
+  margin-right: 14px;
+  padding: 10px 24px;
+  border: none;
+}
